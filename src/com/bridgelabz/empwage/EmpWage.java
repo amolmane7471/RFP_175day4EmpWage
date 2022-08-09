@@ -7,14 +7,23 @@ public class EmpWage {
 		/*
 		 * UC1 : check for employee attendance
 		 */
-		int IS_FULLTIME=1;
-		int EMP_RATE_PER_HOUR=20;
+		int IS_FULLTIME = 1;
+		int IS_PARTTIME = 2;
+		int EMP_RATE_PER_HOUR = 20;
 		int empHrs;
 		int empWage;
-		double empcheck=Math.floor(Math.random()*10)%2;
-		if(empcheck==IS_FULLTIME)
-		{	empHrs=8;
-			System.out.println("Emp is present");
+		double empcheck = Math.floor(Math.random()*10)%3;
+		if(empcheck == IS_FULLTIME)
+		{	empHrs = 8;
+			System.out.println("Emp is full time present");
+		}
+		/*
+		 * UC3 : calculate employee wage for part time
+		 */
+		else if(empcheck == IS_PARTTIME)
+		{
+			empHrs = 4;
+			System.out.println("Emp is part time present");
 		}
 		else 
 		{
